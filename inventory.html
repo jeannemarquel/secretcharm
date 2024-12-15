@@ -5,30 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <title>secret charm: inventory</title>
-  <style>
-   
-table {
+    <style>
+        /* Styles remain unchanged for the most part */
+        table {
             width: 70%;
             border-collapse: collapse;
-            margin: 0 auto; 
-            border-radius: 15px; 
-            overflow: hidden; 
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
         }
         th, td {
             border: 1px solid #E6E6E6;
-            text-align: center; 
+            text-align: center;
             padding: 8px;
-            vertical-align: middle; 
-            background-color: white; /* Change this color to your preference */
-            color: #29353C; /* Text color */
-}
-        td .stock-buttons,
-        td .action-buttons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px; /* Adjust if needed */
-}
+            vertical-align: middle;
+            background-color: white;
+            color: #29353C;
+        }
         th {
             background-color: #7b241c;
         }
@@ -49,7 +42,6 @@ table {
             align-items: center;
             justify-content: center;
             gap: 5px;
-            
         }
         .stock-buttons button {
             padding: 4px 8px;
@@ -58,7 +50,6 @@ table {
             cursor: pointer;
             border-radius: 4px;
         }
-
         .action-buttons button.edit-button {
             padding: 4px 8px;
             font-family: Times New Roman;
@@ -68,7 +59,6 @@ table {
             cursor: pointer;
             border-radius: 4px;
         }
-
         .action-buttons button.delete-button {
             padding: 4px 8px;
             font-family: Times New Roman;
@@ -78,23 +68,19 @@ table {
             cursor: pointer;
             border-radius: 4px;
         }
-
-        .stock-buttons button:hover{
+        .stock-buttons button:hover {
             background-color: #CD5C5C;
             color: #F3CFC6;
         }
-
-       .action-buttons button:hover{
-        background-color: #F3CFC6;
-        color: #7b241c;
-       }
-
+        .action-buttons button:hover {
+            background-color: #F3CFC6;
+            color: #7b241c;
+        }
         .bottom-buttons {
             display: flex;
             justify-content: flex-end;
             gap: 10px;
             margin-top: 20px;
-
         }
         .bottom-buttons button {
             padding: 10px 15px;
@@ -105,7 +91,6 @@ table {
             color: #7b241c;
             cursor: pointer;
             font-family: Times New Roman;
-
         }
         .bottom-buttons .update-button {
             background-color:  #7b241c;
@@ -115,10 +100,8 @@ table {
             background-color: #7b241c;
             color: #F3CFC6;
         }
-
-
         .modal {
-            display: none; /* Hidden by default */
+            display: none;
             position: fixed;
             z-index: 1000;
             left: 0;
@@ -126,9 +109,8 @@ table {
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+            background-color: rgba(0, 0, 0, 0.5);
         }
-
         .modal-content {
             background-color: #F1F4EC;
             margin: 10% auto;
@@ -138,37 +120,31 @@ table {
             width: 50%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-
         .modal-header {
             font-size: 18px;
             font-weight: bold;
             text-align: center;
             margin-bottom: 10px;
         }
-
         .modal-body {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-
         .modal-body label {
             font-weight: bold;
         }
-
         .modal-body input {
             padding: 8px;
             width: 100%;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-
         .modal-footer {
             display: flex;
             justify-content: space-between;
             margin-top: 10px;
         }
-
         .modal-footer button {
             padding: 10px 20px;
             border: none;
@@ -176,30 +152,32 @@ table {
             cursor: pointer;
             color: white;
         }
-
         .close-btn {
             background-color: #29353C;
             font-family: Times New Roman;
-
         }
-
         .add-btn {
             background-color: #44576D;
             font-family: Times New Roman;
-
         }
-
         .modal-footer button:hover {
             background-color: #AAC7D8;
             color: #44576D;
         }
-
-</style>
+        /* Edit Modal */
+        .edit-modal .modal-content {
+            width: 50%;
+        }
+        .edit-modal .modal-header {
+            background-color: #CD5C5C;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-  <nav>
-    <a href="products.html">products</a>
-    <a href="inventory.html">inventory</a>
+    <nav>
+        <a href="products.html">products</a>
+        <a href="inventory.html">inventory</a>
     </nav>
 
     <h2 style="color:  #F1F4EC; text-align: center;"> . </h2>
@@ -216,6 +194,7 @@ table {
             </tr>
         </thead>
         <tbody>
+            <!-- Add rows for products here -->
             <tr>
                 <td>
                     <div class="product-info">
@@ -233,8 +212,8 @@ table {
                 <td>2499.00</td>
                 <td>
                     <div class="action-buttons">
-                        <button class= "edit-button" onclick="editProduct(this)">Edit</button>
-                        <button class= "delete-button" onclick="deleteProduct(this)">Delete</button>
+                        <button class="edit-button" onclick="editProduct(this)">Edit</button>
+                        <button class="delete-button" onclick="deleteProduct(this)">Delete</button>
                     </div>
                 </td>
             </tr>
@@ -414,7 +393,7 @@ table {
                     </div>
                 </td>
             </tr>
-           
+
         </tbody>
     </table>
 
@@ -423,25 +402,21 @@ table {
         <button class="update-button" onclick="updateProducts()">Update All</button>
     </div>
 
-    <!-- Modal -->
+    <!-- Add Product Modal -->
     <div id="addProductModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">Add Product</div>
             <div class="modal-body">
                 <label for="productName">Product Name</label>
                 <input type="text" id="productName" placeholder="Enter product name">
-
                 <label for="productDescription">Product Description</label>
                 <input type="text" id="productDescription" placeholder="Enter product description">
-
                 <label for="productPrice">Product Price</label>
                 <input type="number" id="productPrice" placeholder="Enter product price">
-
                 <label for="productStock">Stock Quantity</label>
                 <input type="number" id="productStock" placeholder="Enter stock quantity">
-
                 <label for="productPhoto">Product Photo</label>
-                <input type="photo" id="productPhoto" placeholder="Attach product photo">
+                <input type="file" id="productPhoto" placeholder="Attach product photo">
             </div>
             <div class="modal-footer">
                 <button class="close-btn" onclick="closeModal()">Close</button>
@@ -450,18 +425,39 @@ table {
         </div>
     </div>
 
+    <!-- Edit Product Modal -->
+    <div id="editProductModal" class="modal">
+        <div class="modal-content edit-modal">
+            <div class="modal-header">Edit Product</div>
+            <div class="modal-body">
+                <label for="editProductName">Product Name</label>
+                <input type="text" id="editProductName" placeholder="Enter product name">
+                <label for="editProductDescription">Product Description</label>
+                <input type="text" id="editProductDescription" placeholder="Enter product description">
+                <label for="editProductPrice">Product Price</label>
+                <input type="number" id="editProductPrice" placeholder="Enter product price">
+                <label for="editProductStock">Stock Quantity</label>
+                <input type="number" id="editProductStock" placeholder="Enter stock quantity">
+                <label for="editProductPhoto">Product Photo</label>
+                <input type="file" id="editProductPhoto" placeholder="Attach product photo">
+            </div>
+            <div class="modal-footer">
+                <button class="close-btn" onclick="closeEditModal()">Close</button>
+                <button class="add-btn" onclick="submitEditProduct()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Open the modal
+        // Modal logic for adding product
         function openModal() {
             document.getElementById("addProductModal").style.display = "block";
         }
 
-        // Close the modal
         function closeModal() {
             document.getElementById("addProductModal").style.display = "none";
         }
 
-        // Handle product submission
         function submitProduct() {
             const name = document.getElementById("productName").value;
             const price = document.getElementById("productPrice").value;
@@ -475,28 +471,43 @@ table {
             }
         }
 
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById("addProductModal");
-            if (event.target == modal) {
-                closeModal();
+        // Modal logic for editing product
+        function editProduct(button) {
+            const row = button.closest("tr");
+            const name = row.querySelector("span").textContent;
+            const price = row.querySelector("td:nth-child(3)").textContent;
+            const stock = row.querySelector("td:nth-child(2) span").textContent;
+
+            document.getElementById("editProductName").value = name;
+            document.getElementById("editProductPrice").value = price;
+            document.getElementById("editProductStock").value = stock;
+
+            document.getElementById("editProductModal").style.display = "block";
+        }
+
+        function closeEditModal() {
+            document.getElementById("editProductModal").style.display = "none";
+        }
+
+        function submitEditProduct() {
+            const name = document.getElementById("editProductName").value;
+            const price = document.getElementById("editProductPrice").value;
+            const stock = document.getElementById("editProductStock").value;
+
+            if (name && price && stock) {
+                alert(`Product updated:\nName: ${name}\nPrice: ${price}\nStock: ${stock}`);
+                closeEditModal();
+            } else {
+                alert("Please fill out all fields before saving.");
             }
         }
 
         function updateStock(button, change) {
-            // Get the parent element of the button, which is the "stock-buttons" div
             const stockButtonsDiv = button.parentElement;
-
-            // Find the stock display element (span inside the stock-buttons div)
             const stockSpan = stockButtonsDiv.querySelector("span");
-
-            // Convert the current stock value to a number
             let currentStock = parseInt(stockSpan.textContent);
-
-            // Calculate the new stock value
             const newStock = currentStock + change;
 
-            // Update the stock value only if it's not less than 0
             if (newStock >= 0) {
                 stockSpan.textContent = newStock;
             } else {
@@ -505,13 +516,10 @@ table {
         }
 
         function deleteProduct(button) {
-    // Get the row element that contains the delete button
-    const row = button.closest("tr");
-
-    // Remove the row from the table
-    row.remove();
-}
-
+            const row = button.closest("tr");
+            row.remove();
+        }
     </script>
 </body>
 </html>
+
