@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>secret charm: products</title>
+<style>
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.header img {
+    flex: 1;
+    width: 100%;
+    max-width: auto;
+    height: 350px;
+}
+.collection {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.gallery-item {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease; /* Smooth hover animation */
+}
+.gallery-item:hover {
+    transform: scale(1.05); /* Slight enlargement on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+}
+.gallery-item:hover img {
+    transform: scale(1.1); /* Slight enlargement of image on hover */
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+.gallery-item .info {
+    padding: 15px;
+}
+.gallery-item .info h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+.gallery-item .info p {
+    margin: 10px 0 0;
+    color: #777;
+}
+</style>
+</head>
+<body>
+    <nav>
+        <a href="products.html">products</a>
+        <a href="inventory.html">inventory</a>
+    </nav>
+    <div class="header">
+        <img src="productheader.jpg" alt="Header Image">
+    </div>
+
+    <div class="collection">
+        <h2 style="font-size: 2em; margin-bottom: 20px; color:#7b241c">Find Your Sparkle at Secret Charm</h2>
+        <p style = " margin-bottom: 40px;">Explore Secret Charm through stunning images that showcase the beauty, craftsmanship, and timeless elegance of our jewelry.</p>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="product1.jpg" alt="gallery1">
+                <div class="info">
+                    <h3>Sparkle Strand</h3>
+                    <p>A touch of brilliance for your wrist</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="product2.jpg" alt="gallery2">
+                <div class="info">
+                    <h3>Luxe Loops</h3>
+                    <p>Statement earrings to elevate your look</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="product3.jpg" alt="gallery3">
+                <div class="info">
+                    <h3>Cosmic Charm</h3>
+                    <p>Celestial touch for your neckline</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="product4.jpg" alt="gallery4">
+                <div class="info">
+                    <h3>Ethereal Drops</h3>
+                    <p>Dazzling details, hanging in style</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="product5.jpg" alt="gallery5">
+                <div class="info">
+                    <h3>Golden Twist</h3>
+                    <p>Inspired by the iconic French pastry</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="product6.jpg" alt="gallery6">
+                <div class="info">
+                    <h3>Dazzle Chain</h3>
+                    <p>A bracelet that dazzles</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="product7.jpg" alt="gallery7">
+                <div class="info">
+                    <h3>Blooming Petal</h3>
+                    <p>Perfect blend of charm and class</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="product8.jpg" alt="gallery8">
+                <div class="info">
+                    <h3>Secret Embrace</h3>
+                    <p>Timeless teardrop that hugs your finger</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="product9.jpg" alt="gallery9">
+                <div class="info">
+                    <h3>Dream Set</h3>
+                    <p>A collection designed to shine forever</p>
+                </div>
+            </div>
+        </div>
+    
+   
+</body>
+</html>

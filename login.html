@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>secret charm: login</title>
+<style>
+body { 
+    background: url('img2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display:flex;
+}
+.container { 
+    max-width: 1000px;
+    margin: 100px auto 50px; 
+    background:#F6F6F6;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+    padding-bottom: 20px; 
+}
+.contact-section {
+    background-color:#F6F6F6;
+    color:   #44576D;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+form { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input[type=text], select {
+    width: 60%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #F1F4EC;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-color:  #f5b7b1;
+  }
+  input[type=password], select {
+    width: 60%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #F1F4EC;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-color:  #f5b7b1;
+  }
+input[type="submit"] {
+    width: auto;
+    font-family: Times New Roman;
+    padding: 10px 20px;
+    background-color: #7b241c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color:  #CD5C5C;
+}
+.contact-form, .contact-info {
+    width: 48%;
+}
+.contact-info i {
+    margin-right: 10px;
+}
+.jewelry img {
+        width: 100%; /* Or use a specific value like 400px */
+        height: auto;
+        max-width: 500px; /* Optional: limits the size */
+    }
+ 
+</style>
+</head>
+<body>
+   
+    <div class="container">
+        <div class="contact-section">
+            <div class="contact-form">
+                <h1 style="color:#F6F6F6; line-height: 0%; font-size: 45px; text-align: center;"> ... </h1>
+                <h2 style="color:  #CD5C5C; text-align: center;"> secret charm </h2>
+                <h1 style="color: #7b241c; line-height: 0%; font-size: 45px; text-align: center;"> Login </h1>
+                <p style="color: #CD5C5C; line-height: 120%; text-align: center;"> sparkle starts here </p>
+                <br>
+                <form action="products.html">
+                    <input type="text" name="email" placeholder="Email Address" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="submit" value="Login">
+                    <p style="color: #CD5C5C; line-height: 120%; text-align: center;"> Don't have an account? 
+                        <a href="signup.html" style="color:  #7b241c; line-height: 120%; text-align: center;">Sign up</a> </p>
+                </form>
+                <br>
+
+            </div>
+            <div class="contact-info">
+                <div class="jewelry" style="justify-content: center;">
+                    <img src="img1.jpg">
+                </div>   
+        </div>
+
+</body>
+</html>
